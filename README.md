@@ -8,24 +8,24 @@ multi-segmented tower based at each point.
 
 Class Geometry offers three functions:
 
-| update() = copy the GUI control data into the control buffer and call calc..
-| calcGeometry() = call the geometry shader to produce the vertices & indices
-| render() = draw the created geometry
+update() = copy the GUI control data into the control buffer and call calc..\
+calcGeometry() = call the geometry shader to produce the vertices & indices\
+ender() = draw the created geometry\
 
 GeometryPoint is provided for each seed point. 
 
-struct GeometryPoint {
-    vector_float3 pos;	 // 3D coordinate of the base of the tower
-    vector_float2 angle; // initial direction as and X and Y rotation
-    float stiffness;     // controls how quickly the tower responds to angle changes
+struct GeometryPoint {\
+    vector_float3 pos;	 // 3D coordinate of the base of the tower\
+    vector_float2 angle; // initial direction as and X and Y rotation\
+    float stiffness;     // controls how quickly the tower responds to angle changes\
 };
 
 GeometryControl provides global data that all towers share.
 
-struct GeometryControl {
-    int nSides;			// number of sides of a tower
-    int nLevels;		// number of levels in a tower
-    int pCount;			// number of seed points provided
+struct GeometryControl {\
+    int nSides;			// number of sides of a tower\
+    int nLevels;		// number of levels in a tower\
+    int pCount;			// number of seed points provided\
     
     vector_float2 deltaAngle;	// how much the tower rotates at each level
     vector_float2 desiredAngle; // the angle all towers should be moving to (stiffness affects response time)
@@ -35,7 +35,7 @@ struct GeometryControl {
     float deltaDist;		// amount the distance is altered at each level
 };
 
-The Geometry shader uses this data to generate the tower vertices and indices:
+The Geometry shader uses this data to generate the tower vertices and indices:\
 
 kernel void calcGeometryShader
 (
