@@ -8,11 +8,9 @@ multi-segmented tower based at each point.
 
 Class Geometry offers three functions:
 
-update() = copy the GUI control data into the control buffer and call calc..
-
-calcGeometry() = call the geometry shader to produce the vertices & indices
-
-render() = draw the created geometry
+| update() = copy the GUI control data into the control buffer and call calc..
+| calcGeometry() = call the geometry shader to produce the vertices & indices
+| render() = draw the created geometry
 
 GeometryPoint is provided for each seed point. 
 
