@@ -10,7 +10,7 @@ Class Geometry offers three functions:
 
 update() = copy the GUI control data into the control buffer and call calc..\
 calcGeometry() = call the geometry shader to produce the vertices & indices\
-ender() = draw the created geometry\
+ender() = draw the created geometry
 
 GeometryPoint is provided for each seed point. 
 
@@ -37,23 +37,23 @@ struct GeometryControl {\
 
 The Geometry shader uses this data to generate the tower vertices and indices:\
 
-kernel void calcGeometryShader
-(
- device TVertex *vertices       [[ buffer(0) ]], // where to store the vertices
- device ushort *indices         [[ buffer(1) ]], // where to store the indices
- device atomic_uint &vcounter   [[ buffer(2) ]], // where to store the number of vertices created
- device atomic_uint &icounter   [[ buffer(3) ]], // where to store the number of indices created
- device GeometryPoint *pnt      [[ buffer(4) ]], // the seed data for each tower
- constant GeometryControl &ctrl [[ buffer(5) ]], // the global control data shared by all towers
- uint p [[thread_position_in_grid]])
+kernel void calcGeometryShader\
+(\
+ device TVertex *vertices       [[ buffer(0) ]], // where to store the vertices\
+ device ushort *indices         [[ buffer(1) ]], // where to store the indices\
+ device atomic_uint &vcounter   [[ buffer(2) ]], // where to store the number of vertices created\
+ device atomic_uint &icounter   [[ buffer(3) ]], // where to store the number of indices created\
+ device GeometryPoint *pnt      [[ buffer(4) ]], // the seed data for each tower\
+ constant GeometryControl &ctrl [[ buffer(5) ]], // the global control data shared by all towers\
+ uint p [[thread_position_in_grid]])\
 {
 
 Note: this shader also alters the angle field of each seed point (that's why *pnt is not constant)
  
 /////////////////////////
 
-Using the GUI:
-All the control widgets work the same way:
+Using the GUI:\
+All the control widgets work the same way:\
 Press and hold to either side of center to affect the parameters in the specified direction and speed.
 
 Pinch/drag the screen to control position and rotation.
