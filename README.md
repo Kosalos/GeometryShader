@@ -2,14 +2,18 @@
 Geometry shader demonstration for IOS, Swift and Metal
 
 Metal does not offer a geometry shader, so this class supplies one.
+
 Given an array of seed points, this class creates the vertices and indices required to render a
 multi-segmented tower based at each point.
 
 Class Geometry offers three functions:
+
 update() = copy the GUI control data into the control buffer and call calc..
 
 calcGeometry() = call the geometry shader to produce the vertices & indices
+
 render() = draw the created geometry
+
 GeometryPoint is provided for each seed point. 
 
 struct GeometryPoint {
