@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="ipad10_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GeometryShader" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="Background" customModule="GeometryShader" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0lo-O7-UuW" customClass="DeltaView" customModule="GeometryShader" customModuleProvider="target">
+                                <rect key="frame" x="20" y="972" width="120" height="120"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="0lo-O7-UuW" secondAttribute="height" multiplier="1:1" id="8dA-WX-aq5"/>
+                                    <constraint firstAttribute="width" constant="120" id="Arm-oq-T5D"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CNa-SB-v5H" customClass="DeltaView" customModule="GeometryShader" customModuleProvider="target">
+                                <rect key="frame" x="182" y="972" width="120" height="120"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="CNa-SB-v5H" secondAttribute="height" multiplier="1:1" id="Pc4-eM-l27"/>
+                                    <constraint firstAttribute="width" constant="120" id="wP2-RT-HhY"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tC4-mi-Tm4" customClass="MTKView">
+                                <rect key="frame" x="20" y="20" width="794" height="920"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="EZP-7g-ayj" appends="YES" id="kPT-Bc-4Lv"/>
+                                    <outletCollection property="gestureRecognizers" destination="xMu-CU-87A" appends="YES" id="tY5-6h-b6V"/>
+                                    <outletCollection property="gestureRecognizers" destination="XZA-uU-gcg" appends="YES" id="7GM-tV-Ykf"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HDX-QL-fTZ" customClass="DeltaView" customModule="GeometryShader" customModuleProvider="target">
+                                <rect key="frame" x="324" y="972" width="120" height="120"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="HDX-QL-fTZ" secondAttribute="height" multiplier="1:1" id="dz3-1j-5E8"/>
+                                    <constraint firstAttribute="width" constant="120" id="xc3-tB-CKu"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="tC4-mi-Tm4" firstAttribute="leading" secondItem="HDX-QL-fTZ" secondAttribute="trailing" constant="-424" id="AJ7-MS-Svz"/>
+                            <constraint firstItem="CNa-SB-v5H" firstAttribute="top" secondItem="tC4-mi-Tm4" secondAttribute="bottom" constant="32" id="IwD-De-cEt"/>
+                            <constraint firstItem="0lo-O7-UuW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="J9R-NR-dys"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tC4-mi-Tm4" secondAttribute="trailing" constant="20" id="KBW-nP-fnh"/>
+                            <constraint firstItem="tC4-mi-Tm4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="KBf-kQ-3uu"/>
+                            <constraint firstItem="0lo-O7-UuW" firstAttribute="top" secondItem="tC4-mi-Tm4" secondAttribute="bottom" constant="32" id="OMu-Nm-X5F"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="tC4-mi-Tm4" secondAttribute="bottom" constant="172" id="Oia-xA-JqP"/>
+                            <constraint firstItem="HDX-QL-fTZ" firstAttribute="leading" secondItem="CNa-SB-v5H" secondAttribute="trailing" constant="22" id="RBI-3E-LY7"/>
+                            <constraint firstItem="CNa-SB-v5H" firstAttribute="leading" secondItem="0lo-O7-UuW" secondAttribute="trailing" constant="42" id="bb5-sV-Fuk"/>
+                            <constraint firstItem="HDX-QL-fTZ" firstAttribute="top" secondItem="tC4-mi-Tm4" secondAttribute="bottom" constant="32" id="c2m-vx-U96"/>
+                            <constraint firstItem="tC4-mi-Tm4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="cot-hb-VOQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="metalView" destination="tC4-mi-Tm4" id="kN5-y3-hfK"/>
+                        <outlet property="widget1" destination="0lo-O7-UuW" id="NDh-tB-iSu"/>
+                        <outlet property="widget2" destination="CNa-SB-v5H" id="VQ1-2f-skb"/>
+                        <outlet property="widget3" destination="HDX-QL-fTZ" id="Mfe-V4-nk9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="EZP-7g-ayj">
+                    <connections>
+                        <action selector="panGesture:" destination="BYZ-38-t0r" id="E8o-oX-dxa"/>
+                    </connections>
+                </panGestureRecognizer>
+                <pinchGestureRecognizer id="xMu-CU-87A">
+                    <connections>
+                        <action selector="pinchGesture:" destination="BYZ-38-t0r" id="TvB-16-JGO"/>
+                    </connections>
+                </pinchGestureRecognizer>
+                <tapGestureRecognizer id="XZA-uU-gcg">
+                    <connections>
+                        <action selector="tapGesture:" destination="BYZ-38-t0r" id="XUo-KG-Wyl"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="117.98561151079137" y="118.70503597122303"/>
+        </scene>
+    </scenes>
+</document>
