@@ -6,6 +6,8 @@ Metal does not offer a geometry shader, so this class supplies one.
 Given an array of seed points, this class creates the vertices and indices required to render a
 multi-segmented tower based at each point.
 
+[Screenshot](screenshot.png)
+
 Class Geometry offers three functions:
 
 update() = copy the GUI control data into the control buffer and call calc..\
