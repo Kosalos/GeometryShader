@@ -6,6 +6,10 @@ Metal does not offer a geometry shader, so this class supplies one.
 Given an array of seed points, this class creates the vertices and indices required to render a
 multi-segmented tower based at each point.
 
+<a href="https://www.paypal.me/Kosalos/">
+  <img alt="Support via PayPal" src="https://cdn.rawgit.com/twolfson/paypal-github-button/1.0.0/dist/button.svg"/>
+</a>
+
 ![Screenshot](screenshot.png)
 
 Class Geometry offers three functions:
