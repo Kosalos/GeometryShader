@@ -35,7 +35,7 @@ kernel void calcGeometryShader
     // vertices -----------------------------------
     int nVertices = ctrl.nSides * (ctrl.nLevels+1);
     
-    uint vBaseIndex = atomic_load(&vcounter);
+    uint vBaseIndex = atomic_fetch_add_explicit(&vcounter, 0, memory_order_relaxed);
     if(vBaseIndex >= uint(TMAX - nVertices - 10)) return;
     vBaseIndex = atomic_fetch_add_explicit(&vcounter, nVertices, memory_order_relaxed);
     
@@ -79,7 +79,7 @@ kernel void calcGeometryShader
     }
 
     // Indices --------------------------------------
-    uint index = atomic_load(&icounter);
+    uint index = atomic_fetch_add_explicit(&icounter, 0, memory_order_relaxed);
     if(index >= TMAX - 30) return;
     index = atomic_fetch_add_explicit(&icounter,ctrl.nLevels * ctrl.nSides * 6, memory_order_relaxed);
     

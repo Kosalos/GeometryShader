@@ -1,7 +1,6 @@
 #pragma once
 
 #include <simd/simd.h>
-#include <simd/base.h>
 #import "Geometry/Geometry.h"
 
 #define TMAX 3900000
