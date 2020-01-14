@@ -16,9 +16,9 @@ var constantsSize: Int = MemoryLayout<Control>.stride
 var constantsIndex: Int = 0
 let kInFlightCommandBuffers = 3
 
-var translation = float3(1.6,-3.1,1000)
+var translation = simd_float3(1.6,-3.1,1000)
 
-var lightpos = float3()
+var lightpos = simd_float3()
 var lAngle = Float()
 
 class Renderer: NSObject, MTKViewDelegate {

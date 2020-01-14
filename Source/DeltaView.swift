@@ -12,7 +12,7 @@ class DeltaView: UIView {
     var deltaValue:Float = 0
     var name:String = "name"
     
-    var mRange = float2(0,256)
+    var mRange = simd_float2(0,256)
     
     func address<T>(of: UnsafePointer<T>) -> UInt { return UInt(bitPattern: of) }
     
@@ -147,7 +147,7 @@ class DeltaView: UIView {
         }
     }
     
-    func fClamp2(_ v:Float, _ range:float2) -> Float {
+    func fClamp2(_ v:Float, _ range:simd_float2) -> Float {
         if v < range.x { return range.x }
         if v > range.y { return range.y }
         return v
@@ -261,9 +261,9 @@ class DeltaView: UIView {
         let font = UIFont.init(name: "Helvetica", size:sz)!
         
         let textFontAttributes = [
-            NSAttributedStringKey.font: font,
-            NSAttributedStringKey.foregroundColor: color,
-            NSAttributedStringKey.paragraphStyle: paraStyle,
+            NSAttributedString.Key.font: font,
+            NSAttributedString.Key.foregroundColor: color,
+            NSAttributedString.Key.paragraphStyle: paraStyle,
             ]
         
         str.draw(in: CGRect(x:x, y:y, width:800, height:100), withAttributes: textFontAttributes)

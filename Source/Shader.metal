@@ -1,6 +1,6 @@
 #include <metal_stdlib>
 #include <simd/simd.h>
-#import "Shader.h"
+#include "Shader.h"
 
 using namespace metal;
 
@@ -14,7 +14,7 @@ struct Transfer {
 
 vertex Transfer texturedVertexShader
 (
- device TVertex* vData [[ buffer(0) ]],
+ constant TVertex* vData [[ buffer(0) ]],
  constant Control& control [[ buffer(1) ]],
  unsigned int vid [[ vertex_id ]])
 {

@@ -147,7 +147,7 @@ class Geometry {
         let commandEncoder = commandBuffer.makeComputeCommandEncoder()!
         
         commandEncoder.setComputePipelineState(pipe)
-        commandEncoder.setBuffer(vBuffer,       offset:0, index:0)
+        commandEncoder.setBuffer(vBuffer,       offset:0, index:0)      
         commandEncoder.setBuffer(iBuffer,       offset:0, index:1)
         commandEncoder.setBuffer(vCountBuffer,  offset:0, index:2)
         commandEncoder.setBuffer(iCountBuffer,  offset:0, index:3)

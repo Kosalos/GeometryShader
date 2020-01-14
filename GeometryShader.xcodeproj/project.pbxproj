@@ -34,7 +34,6 @@
 		1D26D00F2049172B006A0348 /* Background.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
 		1D26D0112049173C006A0348 /* Shader.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = Shader.metal; sourceTree = "<group>"; };
 		1D26D0122049173D006A0348 /* Renderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
-		1D26D0132049173D006A0348 /* Shader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shader.h; sourceTree = "<group>"; };
 		1D26D01620491748006A0348 /* ArcBall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArcBall.swift; sourceTree = "<group>"; };
 		1D26D01A2049185A006A0348 /* Geometry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Geometry.swift; sourceTree = "<group>"; };
 		1D26D01C2049191B006A0348 /* AAPLTransforms.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AAPLTransforms.swift; sourceTree = "<group>"; };
@@ -42,6 +41,7 @@
 		1D6D8B02204E0DF400027896 /* Geometry.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Geometry.h; sourceTree = "<group>"; };
 		1D6D8B06204E6A5800027896 /* Geometry.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = Geometry.metal; sourceTree = "<group>"; };
 		1D6D8B08204F387400027896 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
+		1DFFB87823CE852C0093C78C /* Shader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shader.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,7 +77,7 @@
 				1D6D8B08204F387400027896 /* Test.swift */,
 				1D6D8B03204E697E00027896 /* Geometry */,
 				1D26D0112049173C006A0348 /* Shader.metal */,
-				1D26D0132049173D006A0348 /* Shader.h */,
+				1DFFB87823CE852C0093C78C /* Shader.h */,
 				1D26CFFF20491699006A0348 /* ViewController.swift */,
 				1D6D8B00204CFCF000027896 /* DeltaView.swift */,
 				1D26D00120491699006A0348 /* Main.storyboard */,
@@ -333,7 +333,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Harry.com.GeometryShader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = Source/Shader.h;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
@@ -349,7 +349,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Harry.com.GeometryShader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = Source/Shader.h;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;

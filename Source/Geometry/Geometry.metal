@@ -1,6 +1,6 @@
 #include <metal_stdlib>
 #include <simd/simd.h>
-#include "Source/Shader.h"
+#include "../Shader.h"
 
 using namespace metal;
 

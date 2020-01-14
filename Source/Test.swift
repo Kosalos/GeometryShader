@@ -1,7 +1,7 @@
 import UIKit
 import MetalKit
 
-let NUMPOINT:Int = 1000
+let NUMPOINT:Int = 500
 
 var ctrl = GeometryControl()
 var pnt = Array(repeating:GeometryPoint(), count:NUMPOINT)
@@ -12,10 +12,10 @@ class Test {
     init() {
         let K:Float = NUMPOINT > 1 ? 300 : 0
         
-        ctrl.nSides = 6
-        ctrl.nLevels = 8
-        ctrl.radius = 3
-        ctrl.dist = 8
+        ctrl.nSides = 8
+        ctrl.nLevels =  8
+        ctrl.radius = 8
+        ctrl.dist = 3
         ctrl.pCount = Int32(NUMPOINT)
 
         for i in 0 ..< NUMPOINT {
@@ -25,7 +25,7 @@ class Test {
                 pnt[i].pos.z = fRandom(-K,K)
             }
             
-            pnt[i].angle = float2(0,0)
+            pnt[i].angle = simd_float2(0,0)
             pnt[i].stiffness = fRandom(0.02,1)
         }
         
@@ -37,7 +37,7 @@ class Test {
         ctrl.deltaDist = 1 + length
         ctrl.deltaAngle.x = angle2
         ctrl.deltaAngle.y = angle1
-        ctrl.desiredAngle = float2(directionX,directionY)
+        ctrl.desiredAngle = simd_float2(directionX,directionY)
 
         geo.update(&ctrl,&pnt)
     }

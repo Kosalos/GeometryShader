@@ -1,6 +1,8 @@
 # GeometryShader
 Geometry shader demonstration for IOS, Swift and Metal
 
+update Jan 14,2020:  XCode 11.3.1, Swfit 5
+
 Metal does not offer a geometry shader, so this class supplies one.
 
 Given an array of seed points, this class creates the vertices and indices required to render a
